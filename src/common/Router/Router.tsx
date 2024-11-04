@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Test } from "../../bites/Test/Test";
 import { Home } from "../Home/Home";
 import { NotFound } from "../NotFound";
@@ -8,7 +8,7 @@ export const AppRouter: React.FC = () => {
   const { bites, home, notFound } = routes;
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path={home()} element={<Home />} />
 
@@ -18,6 +18,6 @@ export const AppRouter: React.FC = () => {
         <Route path="*" element={<Navigate to={notFound()} />} />
         <Route path={notFound()} element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
