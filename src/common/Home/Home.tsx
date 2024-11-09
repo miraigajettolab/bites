@@ -1,5 +1,10 @@
 import React from "react";
+import { PageLayout } from "../PageLayout/PageLayout";
 
 export const Home: React.FC = () => {
-  return <h1>Home</h1>;
+  return (
+    <PageLayout>
+      <h1>Home</h1>
+    </PageLayout>
+  );
 };
